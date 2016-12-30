@@ -2,3 +2,4 @@ This directory contains two html pages which retrieve the http headers of the en
 Cloning of this directory is done.
 
 This directory also contain one html, one css and one js file for showing a popup on click on content.
+(popup.html jquery_popup.js jquery_popup.css)
