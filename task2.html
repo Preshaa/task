@@ -1,0 +1,75 @@
+
+ <html>
+  <head>
+     <title>task!</title>
+    <style>
+    *{box-sizing: border-box;}
+     header , footer{
+        background-color: black;
+        color: white;
+        text-align: center;
+        clear:both;
+      }
+
+     div{
+        width: 100%;
+        height: 100%;
+
+     }
+     section{
+        width: 80%;
+        float: left;
+        text-align:  center;
+        
+
+     }
+     aside{
+        width:20%;
+        float: left;
+        text-align: justify;
+         border-right:  1px solid;
+        padding: 5px;
+     }
+     </style>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script >
+     $(document).ready(function(){
+        $("#sub").click(function(){
+     var urlt= $("#demo1").val();
+     $.ajax({
+        type:"GET",
+        url: $("#demo1").val(),
+
+        complete: function(resp)
+        {   
+           
+        document.getElementById("demo2").innerHTML =
+         resp.getAllResponseHeaders();
+        }
+    });
+ });
+ });
+    </script>
+  </head>
+  <body>
+   <div>
+     <header style="height: 30%;">
+       <h1>Get HTTP Headers</h1>
+     </header>
+     <div style="height: 60%;padding-top: 100px;">
+       <aside>
+           HTTP headers allow the client and the server to pass additional information with the request or the response. A request header consists of its case-insensitive name followed by a colon ' : ', then by its value (without line breaks).
+       </aside>
+       <section>
+         <form method="GET" id="demo" >
+           <input type="url" name="url" placeholder="enter url" id="demo1">
+           <input type="button" id="sub" value="submit">  
+           <p id="demo2" content=""></p>
+         </form>
+       </section>
+
+     </div>
+     <footer style="height: 10%;">Copyright&copy;Innoraft.com</footer>
+  </div>
+  </body>
+</html>
