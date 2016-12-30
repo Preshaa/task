@@ -1,0 +1,35 @@
+        body{
+            background-color: white;
+        }
+        div{
+            border:1px solid;
+            color:pink;
+            margin: 30px;
+            padding: 20px;
+
+        }
+        span.Popup{
+            border:1px solid;
+            background-color: gray;
+            color:white;
+            top:200px;
+            right: 200px;
+            left: 200px;
+            opacity: 0.9;
+            position: absolute;
+            display: none;
+
+        }
+        p{
+            padding: 15px;
+        }
+        button{
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            cursor: pointer;
+         
+        }
+        h1{
+            text-align: center;
+        }
